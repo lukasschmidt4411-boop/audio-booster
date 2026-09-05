@@ -1,0 +1,212 @@
+:root {
+  --text-primary: #1d2144;
+  --text-dark: var(--text-primary);
+  --text-body: #959cb1;
+  --accent: #52b788;
+  --surface: #ffffff;
+  --surface-muted: #f3f4f8;
+  --border-subtle: rgba(29, 33, 68, 0.12);
+  --card-shadow: 0 12px 32px rgba(29, 33, 68, 0.08);
+  --shadow-2xl-drop: 0 25px 50px rgba(0, 0, 0, 0.25);
+  color-scheme: light only;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  color-scheme: light only;
+  min-height: 100dvh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100dvh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--text-dark);
+  background:
+    radial-gradient(circle at top, color-mix(in srgb, #4a6cf7 10%, var(--surface-muted)) 0%, transparent 55%),
+    var(--surface-muted);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page-shell {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100dvh;
+  padding: 1.5rem 1rem;
+}
+
+.welcome-section {
+  width: 100%;
+}
+
+.welcome-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 1.25rem 2.5rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: var(--card-shadow);
+}
+
+@media (min-width: 640px) {
+  .welcome-card {
+    padding: 2.5rem 2rem 3rem;
+  }
+}
+
+.welcome-intro,
+.welcome-outro {
+  width: min(100%, 50rem);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.welcome-intro-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 50.625rem;
+  margin: 0 auto 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #000000;
+}
+
+.welcome-intro-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+}
+
+.welcome-intro-title {
+  font-size: 1.675rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .welcome-intro-title {
+    font-size: 2.25rem;
+  }
+}
+
+.welcome-steps {
+  max-width: 45rem;
+  margin: 0 auto 2rem;
+  padding: 1rem 1.25rem;
+  list-style: none;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625;
+  color: var(--text-primary);
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.welcome-steps li + li {
+  margin-top: 0.75rem;
+}
+
+.welcome-step-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.welcome-step-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 0.1em;
+}
+
+.welcome-step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  flex-shrink: 0;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .welcome-steps {
+    font-size: 1.25rem;
+  }
+}
+
+.welcome-screenshot {
+  width: min(100%, 55.6875rem);
+  margin: 0;
+  filter: drop-shadow(var(--shadow-2xl-drop));
+}
+
+.welcome-steps--after-shot {
+  margin-top: 3.5rem;
+}
+
+.welcome-screenshot + .welcome-screenshot {
+  margin-top: 2rem;
+}
+
+.welcome-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px 6px 0 0;
+}
+
+.welcome-outro {
+  margin: 1.5rem auto 0;
+  max-width: 45rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625;
+  color: var(--text-body);
+}
+
+@media (min-width: 640px) {
+  .welcome-outro {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .welcome-outro {
+    font-size: 1.25rem;
+  }
+}
